@@ -1,7 +1,21 @@
 {% extends 'base.html' %}
 
 
-{% block content %}
-<h4>Login</h4>
 
+{% block content %}
+
+<!--signupform-->
+            <!-- Form -->
+<form action="" method="post">
+    {% csrf_token %}
+    <input type="text" name="username" placeholder="username"><br>
+    <input type="text" name="password" placeholder="password"><br>
+    <button type="submit" class="btn">login</button>
+</form>
+<dev>
+    {% for message in messages %}
+    <h3>{{message}} </h3>
+    {% endfor %}
+</dev>
 {% endblock %}
+ck %}

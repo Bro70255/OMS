@@ -14,7 +14,12 @@
     <input type="text" name="email" placeholder="email"><br>
     <input type="text" name="password1" placeholder="Password"><br>
     <input type="text" name="password2" placeholder="Conform Password"><br>
-    <button type="submit" class="btn">Send Message</button>
+    <button type="submit" class="btn">Submit</button>
 </form>
+<dev>
+    {% for message in messages %}
+    <h3>{{message}} </h3>
+    {% endfor %}
+</dev>
 
 {% endblock %}
