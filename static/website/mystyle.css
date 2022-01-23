@@ -1,18 +1,18 @@
 
-.body11{
+.product_container{
     padding: 10px;
     display: flex;
     border-style: groove;
     text-align: center;
     }
-#image1{
+.product_container img{
      width: 150px;
      height: 150px;
 }
-.body11 p{
+.product_container p{
     border-style: groove;
 }
-.body11 h4{
+.product_container h4{
     color: blue;
 }
 /*--------------------------------------------------------------
@@ -105,33 +105,6 @@ display: none;
   width: 100%;
 }
 /*--------------------------------------------------------------
-# body column and rows
---------------------------------------------------------------*/
-* {
-  box-sizing: border-box;
-}
-.column {
-  float: left;
-  width: 50%;
-  padding: 10px;
-  height: 150px;
-  text-align: center;
-}
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-#image2{
-  text-align: center;
-}
-@media (max-width: 992px) {
-    #image2{
- margin-top: 20px;
-}
-}
-/*--------------------------------------------------------------
 # body button
 --------------------------------------------------------------*/
 
@@ -190,6 +163,8 @@ display: none;
   height: 190px;
   text-align: center;
 }
+.product_container{
+   float:left;
 }
 }
 

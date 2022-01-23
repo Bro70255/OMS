@@ -5,57 +5,52 @@
 {% block content %}
 
 
-<dev class ="body11">
+<dev class ="product_container">
     <h4>{{ product_list.0.name}}</h4>
-    <img id="image1" src="{% static 'pics/pdwd.jpg' %}">
+    <img src="{% static 'pics/pdwd.jpg' %}">
     <p>{{ product_list.0.desc }}</p>
     <p>price:{{ product_list.0.price }}</p>
      {{ products.desc }}
       <a href="{% url 'products' %}"><button class="btn">Add to Cart</button></a>
     <a href="{% url 'products' %}"><button class="btn">Buy</button></a>
 </dev>
-<dev class ="body11">
+<dev class ="product_container">
     <h4>{{ product_list.1.name}}</h4>
-    <img id="image1" src="{% static 'pics/lwd.jpg' %}">
+    <img src="{% static 'pics/lwd.jpg' %}">
     <p>{{ product_list.1.desc }}</p>
     <p>price:{{ product_list.1.price }}</p>
-     {{ products.desc }}
-      <a href="{% url 'products' %}"><button class="btn">Add to Cart</button></a>
+    <a href="{% url 'products' %}"><button class="btn">Add to Cart</button></a>
     <a href="{% url 'products' %}"><button class="btn">Buy</button></a>
 </dev>
-<dev class ="body11">
+<dev class ="product_container">
     <h4>{{ product_list.2.name}}</h4>
-    <img id="image1" src="{% static 'pics/dbb.jpg' %}">
+    <img src="{% static 'pics/dbb.jpg' %}">
     <p>{{ product_list.2.desc }}</p>
     <p>price:{{ product_list.2.price }}</p>
-     {{ products.desc }}
       <a href="{% url 'products' %}"><button class="btn">Add to Cart</button></a>
     <a href="{% url 'products' %}"><button class="btn">Buy</button></a>
 </dev>
-<dev class ="body11">
+<dev class ="product_container">
     <h4>{{ product_list.3.name}}</h4>
-    <img id="image1" src="{% static 'pics/dbb1.jpg' %}">
+    <img src="{% static 'pics/dbb1.jpg' %}">
     <p>{{ product_list.3.desc }}</p>
     <p>price:{{ product_list.3.price }}</p>
-     {{ products.desc }}
       <a href="{% url 'products' %}"><button class="btn">Add to Cart</button></a>
     <a href="{% url 'products' %}"><button class="btn">Buy</button></a>
 </dev>
-<dev class ="body11">
+<dev class ="product_container">
     <h4>{{ product_list.4.name}}</h4>
-    <img id="image1" src="{% static 'pics/dbb2.jpg' %}">
+    <img src="{% static 'pics/dbb2.jpg' %}">
     <p>{{ product_list.4.desc }}</p>
     <p>price:{{ product_list.4.price }}</p>
-     {{ products.desc }}
-      <a href="{% url 'products' %}"><button class="btn">Add to Cart</button></a>
+    <a href="{% url 'products' %}"><button class="btn">Add to Cart</button></a>
     <a href="{% url 'products' %}"><button class="btn">Buy</button></a>
 </dev>
-<dev class ="body11">
+<dev class ="product_container">
     <h4>{{ product_list.5.name}}</h4>
-    <img id="image1" src="{% static 'pics/dbb3.jpg' %}">
+    <img src="{% static 'pics/dbb3.jpg' %}">
     <p>{{ product_list.5.desc }}</p>
     <p>price:{{ product_list.5.price }}</p>
-     {{ products.desc }}
       <a href="{% url 'products' %}"><button class="btn">Add to Cart</button></a>
     <a href="{% url 'products' %}"><button class="btn">Buy</button></a>
 </dev>
