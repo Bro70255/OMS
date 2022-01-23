@@ -8,6 +8,11 @@ def index(request):
     return render(request, 'index.html')
 
 
+def logout(request):
+    auth.logout(request)
+    return redirect('/')
+
+
 def login(request):
     if request.method == 'POST':
         username = request.POST['username']
@@ -16,10 +21,10 @@ def login(request):
         user = auth.authenticate(username=username, password=password)
 
         if user is not None:
-            auth.login(request,user)
+            auth.login(request, user)
             return redirect("products")
         else:
-            messages.info(request,'invalid credentials')
+            messages.info(request, 'invalid credentials')
             return redirect('login')
     else:
         return render(request, 'login.html')
@@ -51,7 +56,8 @@ def signup(request):
                 messages.info(request, 'Email Taken')
                 return redirect("signup")
             else:
-                user = User.objects.create_user(username=username, password=password1, email=email, first_name=first_name,last_name=last_name)
+                user = User.objects.create_user(username=username, password=password1, email=email,
+                                                first_name=first_name, last_name=last_name)
                 user.save()
                 print('user created')
                 return redirect("login")
