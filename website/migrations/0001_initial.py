@@ -21,4 +21,5 @@ class Migration(migrations.Migration):
                 ('price', models.IntegerField()),
             ],
         ),
+
     ]
