@@ -6,13 +6,12 @@
 
     {% for products in product_list %}
 <dev class ="product_container">
-    {{ products.name }}
-    {{ products.img.url }}
-   <p>{{ products.desc }}</p>
-    <p>price:{{ products.price }}</p>
-      <a href="{% url 'products' %}"><button class="btn">Add to Cart</button></a>
-    <a href="{% url 'products' %}"><button class="btn">Buy</button></a>
-
+        <dev>Title :-{{ products.name }}</dev>
+        <p>{{ products.img.url }}</p>
+        <p>{{ products.desc }}</p>
+        <p>price:{{ products.price }}</p>
+        <a href="{% url 'checkout' %}"><button class="btn">Add to Cart</button></a>
+        <a href="{% url 'checkout' %}"><button class="btn">Buy</button></a>
 </dev>
     {% endfor %}
 

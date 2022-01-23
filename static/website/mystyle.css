@@ -1,4 +1,14 @@
-
+.login_container{
+     display: flex;
+     padding: 20px;
+     width: 50px;
+     height: 50px;
+     column-gap: 10px;
+}
+.login_container1{
+    padding: 5px ;
+    display: flex;
+}
 .product_container{
     padding: 10px;
     display: flex;

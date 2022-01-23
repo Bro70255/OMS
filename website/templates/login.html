@@ -1,10 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
 
-</body>
-</html>
+
+{% block content %}
+ <h3>Login form:-</h3>
+<dev class="login_container">
+
+    <h5>Ussername:{{ form.username }}</h5>
+    <h5>Email:{{ form.email }}</h5>
+    <h5>Passowrd1:{{ form.password1 }}</h5>
+    <h5>Password2:{{ form.password2 }}</h5>
+
+</dev>
+<a href="#"><button class="btn">Submit</button></a>
+{% endblock %}
