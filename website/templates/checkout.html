@@ -1,7 +1,16 @@
 {% extends 'base.html' %}
 
 
+
 {% block content %}
-<h4>your items</h4>
+
+<!--checkoutform-->
+
+<form action="" method="post">
+    {% csrf_token %}
+    <input type="checkbox" id="cash on delivery"/><h5>Cash on Delivery</h5>
+    <input type="checkbox" id="online payment"/><h5>online payment</h5>
+    <button type="submit" class="btn">checkout</button>
+</form>
 
 {% endblock %}

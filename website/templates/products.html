@@ -5,13 +5,15 @@
 {% block content %}
 
     {% for products in product_list %}
-<dev class ="product_container">
+<dev class ="product_container product_data">
         <dev>Title :-{{ products.name }}</dev>
         <p>{{ products.img.url }}</p>
         <p>{{ products.desc }}</p>
         <p>price:{{ products.price }}</p>
-        <a href="{% url 'checkout' %}"><button class="btn">Add to Cart</button></a>
+        <a href="{% url 'checkout' %}"><button class="addtocartBtn btn" >Add to Cart</button></a>
         <a href="{% url 'checkout' %}"><button class="btn">Buy</button></a>
+        {% csrf_token %}
+        <input type="hidden" value="{{ products.id }}" class="prod_id">
 </dev>
     {% endfor %}
 

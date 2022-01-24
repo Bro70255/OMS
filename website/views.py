@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User, auth
-from .models import Products
+from .models import Products,Checkout
 from django.contrib import messages
 
 
@@ -36,7 +36,12 @@ def products(request):
 
 
 def checkout(request):
-    return render(request, 'checkout.html')
+    if request.method == 'POST':
+        prod_id = (request.POST.get('product_id'))
+        Checkout.objects.create(user=request.user,product_id=prod_id)
+        return redirect('product')
+    else:
+        return render(request, 'checkout.html')
 
 
 def signup(request):
