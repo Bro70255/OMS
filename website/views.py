@@ -1,12 +1,24 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User, auth
-from .models import Products,Checkout,Orders
+from .models import Products, Checkout, Orders
 from django.contrib import messages
+from rest_framework import generics
+from .serializers import OrdersSerializers
+
+
+class Orders_list(generics.ListCreateAPIView):
+    queryset = Orders.objects.all()
+    serializer_class = OrdersSerializers
+
+
+class OrderDetails(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Orders.objects.all()
+    serializer_class = OrdersSerializers
 
 
 def index(request):
     orderlist_list = Orders.objects.all()
-    return render(request, 'index.html',{'orderlist_list': orderlist_list})
+    return render(request, 'index.html', {'orderlist_list': orderlist_list})
 
 
 def logout(request):
@@ -39,7 +51,7 @@ def products(request):
 def checkout(request):
     if request.method == 'POST':
         prod_id = int(request.POST.get('product_id'))
-        Checkout.objects.create(user=request.user,product_id=prod_id)
+        Checkout.objects.create(user=request.user, product_id=prod_id)
         return redirect('product')
     else:
         return render(request, 'checkout.html')
