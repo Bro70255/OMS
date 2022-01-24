@@ -1,11 +1,12 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User, auth
-from .models import Products,Checkout
+from .models import Products,Checkout,Orders
 from django.contrib import messages
 
 
 def index(request):
-    return render(request, 'index.html')
+    orderlist_list = Orders.objects.all()
+    return render(request, 'index.html',{'orderlist_list': orderlist_list})
 
 
 def logout(request):

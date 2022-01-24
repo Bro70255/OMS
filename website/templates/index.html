@@ -4,6 +4,13 @@
 
 {% block content %}
 
-<h3>Order management system</h3>
+<h3>Order Management system</h3><br>
+{% for orders in orderlist_list %}
+<dev class ="order_container">
+       <p>Orders:{{ orders.username }}</p>
+        <p>Product:{{ orders.products }}</p>
+        <p>Method_OF_Payment:{{ orders.paymentmethod }}</p>
+</dev>
+{% endfor %}
 
 {% endblock %}ml>
