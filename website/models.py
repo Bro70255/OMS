@@ -16,11 +16,10 @@ class Products(models.Model):
 class Checkout(models.Model):
     user = models.ForeignKey(User, on_delete=CASCADE)
     product = models.ForeignKey(Products, on_delete=models.CASCADE)
-    payment = models.CharField(max_length=100)
     created_at = models.DateTimeField(auto_now_add=True)
 
 
 class Orders(models.Model):
     username = models.CharField(max_length=100)
     products = models.CharField(max_length=200)
-    payment_method = models.CharField(max_length=100)
+    paymentmethod = models.CharField(max_length=100)

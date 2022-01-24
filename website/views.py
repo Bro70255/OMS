@@ -37,7 +37,7 @@ def products(request):
 
 def checkout(request):
     if request.method == 'POST':
-        prod_id = (request.POST.get('product_id'))
+        prod_id = int(request.POST.get('product_id'))
         Checkout.objects.create(user=request.user,product_id=prod_id)
         return redirect('product')
     else:
